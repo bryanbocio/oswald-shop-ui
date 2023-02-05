@@ -36,5 +36,9 @@ export class ShopService {
 
   getTypes():Observable<Type[]>{
     return this.httpClient.get<Type[]>(environment.API_URL.concat('products/product-types'));
-}
+  }
+
+  getProductById(productId:number){
+    return this.httpClient.get<Product>(environment.API_URL.concat('products/').concat(`${productId}`))
+  }
 }
