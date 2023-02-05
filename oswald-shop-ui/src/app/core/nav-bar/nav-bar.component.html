@@ -2,9 +2,12 @@
 bg-white border-bottom shadow-sm fixed-top">
     <h5 class="my-0 font-weight-normal " routerLink="/" style="cursor: pointer;">OSWALD SHOP</h5>
     <nav class="my-2 my-md-0 mr-md-3 text-uppercase" style="font-size: larger;">
-        <a href="" class="p-2 text-dark" routerLink="/">Home</a>
-        <a href="" class="p-2 text-dark" routerLink="/shop">Shop</a>
-        <a href="" class="p-2 text-dark" routerLink="/contact">Contact</a>
+        <a href="" class="p-2" 
+        routerLink="/" 
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">Home</a>
+        <a href="" class="p-2" routerLink="/shop" routerLinkActive="active">Shop</a>
+        <a href="" class="p-2" routerLink="/contact" routerLinkActive="active">Contact</a>
     </nav>
     <div class="d-flex align-items-center">
         <a class="position-relative">
