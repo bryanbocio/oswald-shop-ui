@@ -3,16 +3,34 @@ import {
   HttpRequest,
   HttpHandler,
   HttpEvent,
-  HttpInterceptor
+  HttpInterceptor,
+  HttpErrorResponse
 } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { catchError} from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
 
-  constructor() {}
+  constructor(private router:Router) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    return next.handle(request);
+    return next.handle(request).pipe(
+      catchError((error:HttpErrorResponse)=>{
+
+        if(error){
+          if(error.status===404){
+            this.router.navigateByUrl('/not-found')
+          }
+
+          if(error.status===500){
+            this.router.navigateByUrl('/server-error')
+          }
+        }
+        return throwError(()=> new Error(error.message));
+      })
+
+    );
   }
 }
