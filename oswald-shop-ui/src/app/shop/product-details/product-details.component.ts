@@ -12,7 +12,10 @@ import { BreadcrumbService } from 'xng-breadcrumb';
 export class ProductDetailsComponent implements OnInit {
   product?:Product;
 
-  constructor(private shopService:ShopService, private activatedRoute:ActivatedRoute, private breadCrumbService:BreadcrumbService) { }
+  constructor(private shopService:ShopService, private activatedRoute:ActivatedRoute, private breadCrumbService:BreadcrumbService) {
+    this.breadCrumbService.set('@productDetails',' ');
+
+   }
 
   ngOnInit(): void {
     this.loadProduct()
