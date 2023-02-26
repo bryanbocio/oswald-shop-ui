@@ -44,22 +44,24 @@ export class BasketService {
 
   }
 
+  private addOrUpdateItem(items:BasketItem[], itemToAdd:BasketItem, quantity:number):BasketItem[]{
+    const item= items.find(x=> x.id===itemToAdd.id);
+    if(item) item.quantity+=quantity;
+    else{
+      itemToAdd.quantity=quantity;
+      items.push(itemToAdd);
+    }
+
+    return items;
+}
+
   createBasket():Basket{
     const basket= new Basket();
     localStorage.setItem('basket_id', basket.id);
     return basket;
   }
 
-  private addOrUpdateItem(items:BasketItem[], itemToAdd:BasketItem, quantity:number):BasketItem[]{
-      const item= items.find(x=> x.id===itemToAdd.id);
-      if(item) item.quantity+=quantity;
-      else{
-        itemToAdd.quantity=quantity;
-        items.push(itemToAdd);
-      }
-
-      return items;
-  }
+ 
 
   private mapProductItemToBasketItem(item:Product):BasketItem{
     return {
@@ -69,7 +71,7 @@ export class BasketService {
       quantity:0,
       pictureUrl:item.pictureUrl,
       brand:item.productBrand,
-      type:item.productType
+      type:item.productType,
     }
   }
 }

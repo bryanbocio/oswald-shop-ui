@@ -17,5 +17,5 @@ export interface Basket {
   
   export class Basket implements Basket{
     id= cuid();
-    items: BasketItem[];
+    items: BasketItem[]=[];
   }
