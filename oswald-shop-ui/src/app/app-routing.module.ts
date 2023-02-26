@@ -11,6 +11,7 @@ const routes: Routes = [
   {path:'not-found', component:NotFoundComponent},
   {path:'server-error', component:ServerErrorComponent},
   {path:'shop', loadChildren:()=> import('./shop/shop.module').then(module=>module.ShopModule)},
+  {path:'basket', loadChildren:()=> import('./basket/basket.module').then(module=>module.BasketModule)},
   {path:'**', redirectTo:'',pathMatch:'full'},
 
 ];
