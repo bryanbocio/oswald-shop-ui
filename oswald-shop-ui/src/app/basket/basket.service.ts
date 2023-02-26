@@ -18,7 +18,7 @@ export class BasketService {
 
 
   getBasket(id:string){
-    return this.httpClient.get<Basket>(this.baseUrl.concat('baseket?id='+id)).subscribe({
+    return this.httpClient.get<Basket>(this.baseUrl.concat('basket?id='+id)).subscribe({
       next:basket=>this.basketSource.next(basket)
     })
   }
