@@ -12,7 +12,7 @@ export class BasketService {
 
   baseUrl=environment.API_URL;
   private basketSource= new BehaviorSubject<Basket | null>(null);
-  BasketSource$= this.basketSource.asObservable();
+  basketSource$= this.basketSource.asObservable();
 
   constructor(private httpClient: HttpClient) { }
 
