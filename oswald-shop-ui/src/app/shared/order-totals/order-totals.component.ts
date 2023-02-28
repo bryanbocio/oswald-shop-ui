@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BasketService } from 'src/app/basket/basket.service';
 
 @Component({
   selector: 'app-order-totals',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderTotalsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public basketService: BasketService) { }
 
   ngOnInit(): void {
   }
