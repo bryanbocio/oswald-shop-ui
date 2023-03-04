@@ -70,7 +70,7 @@ export class BasketService {
   }
 
   deleteBasket(basket:Basket){
-    return this.httpClient.delete(this.baseUrl.concat('basket?id'+basket.id)).subscribe({
+    return this.httpClient.delete(this.baseUrl.concat('basket?id='+basket.id)).subscribe({
       next:()=> {
         this.basketSource.next(null);
         this.basketTotalSource.next(null);
