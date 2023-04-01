@@ -6,13 +6,13 @@ import { PagerComponent } from './pager/pager.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { OrderTotalsComponent } from './order-totals/order-totals.component'
 import { ReactiveFormsModule } from '@angular/forms';
-import {BsDropdownModule} from 'ngx-bootstrap/dropdown'
+import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
 
 @NgModule({
   declarations: [
     PaginationHeaderComponent,
     PagerComponent,
-    OrderTotalsComponent
+    OrderTotalsComponent,
   ],
   imports: [
     CommonModule,
