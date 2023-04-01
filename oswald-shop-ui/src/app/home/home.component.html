@@ -1,17 +1,86 @@
 <carousel [isAnimated]="true">
     <slide>
-        <img src="assets/images/hero1.jpg" alt="slide" style="display: block; width: 100%;">
+        <div class="sliderItem">
+            <img src="assets/images/sneakers/air2.png" alt="" class="sliderImage">
+            <div class="sliderBg"></div>
+            <h1 class="sliderTitle">AIR FORCE <br> NEW <br> SEASON</h1>
+            <h2 class="sliderPrice">$199</h2>
+            <a href="#product">
+                <button class="buyButton">BUY NOW</button>
+            </a>
+        </div>
     </slide>
     <slide>
-        <img src="assets/images/hero2.jpg" alt="slide" style="display: block; width: 100%;">
+        <div class="sliderItem">
+            <img src="assets/images/sneakers/crater.png" alt="" class="sliderImage">
+            <div class="sliderBg"></div>
+            <h1 class="sliderTitle">AIR JORDAN <br> NEW <br> SEASON</h1>
+            <h2 class="sliderPrice">$199</h2>
+            <a href="#product">
+                <button class="buyButton">BUY NOW</button>
+            </a>
+        </div>
     </slide>
     <slide>
-        <img src="assets/images/hero3.jpg" alt="slide" style="display: block; width: 100%;">
+        <div class="sliderItem">
+            <img src="assets/images/sneakers/blazer.png" alt="" class="sliderImage">
+            <div class="sliderBg"></div>
+            <h1 class="sliderTitle">BLAZER <br> NEW <br> SEASON</h1>
+            <h2 class="sliderPrice">$199</h2>
+            <a href="#product">
+                <button class="buyButton">BUY NOW</button>
+            </a>
+        </div>
     </slide>
 </carousel>
 
 <section class="featured">
-    <div class="d-flex justify-content-center pt-4">
-        <h1>Welcome to the shop!</h1>
+    <div class="features">
+        <div class="feature">
+            <img class="featureIcon" src="assets/images/sneakers/shipping.png" alt="">
+            <span class="featureTitle">FREE SHIPPING</span>
+            <span class="featureDescription">Free worldwide shipping on all orders.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="assets/images/sneakers/return.png" alt="">
+            <span class="featureTitle">30 DAYS RETURN </span>
+            <span class="featureDescription">No question return and easy refund in 14 days.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="assets/images/sneakers/gift.png" alt="">
+            <span class="featureTitle">GIFT CARDS</span>
+            <span class="featureDescription">Buy gift cards and use coupo code easily.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="assets/images/sneakers/contact.png" alt="">
+            <span class="featureTitle">CONTACT US!</span>
+            <span class="featureDescription">Keep in touch via email and support system.</span>
+        </div>
+    </div>
+
+    <div class="product" id="product">
+        <img src="assets/images/sneakers/air.png" alt="" class="productImg">
+        <div class="productDetails">
+            <h1 class="productTitle">AIR FORCE</h1>
+            <h2 class="productPrice">$199</h2>
+            <p class="productDesc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae iure inventore quidem, expedita quia
+                labore exercitationem in natus fugiat id? Quae a est minima quidem quaerat tempora tempore sit
+                blanditiis.
+            </p>
+            <div class="colors">
+                <div class="color"></div>
+                <div class="color"></div>
+            </div>
+            <div class="sizes">
+                <div class="size">38</div>
+                <div class="size">40</div>
+                <div class="size">42</div>
+            </div>
+
+            <button class="productBtn">
+                BUY NOW!
+            </button>
+        </div>
     </div>
 </section>
