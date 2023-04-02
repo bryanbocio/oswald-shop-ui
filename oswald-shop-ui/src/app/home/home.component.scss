@@ -234,3 +234,47 @@ slide{
     font-weight: 600;
     cursor: pointer;
 }
+
+.gallery{
+    padding: 50px;
+    display: flex;
+}
+
+.galleryItem{
+    flex: 1;
+    padding: 50px;
+}
+
+.galleryImg{
+    width: 100%;
+}
+
+.newSeason{
+    display: flex;
+}
+
+.newSeasonItem{
+    flex: 1;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.nsImg{
+    width: 100%;
+    height: 800px;
+}
+
+.nsTitle{
+    font-size: 40px;   
+}
+
+.nsBtn{
+    padding: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}

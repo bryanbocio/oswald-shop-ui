@@ -1,32 +1,10 @@
 <carousel [isAnimated]="true">
-    <slide>
-        <div class="sliderItem">
-            <img src="assets/images/sneakers/air2.png" alt="" class="sliderImage">
+    <slide *ngFor="let product of productList">
+        <div #sliderItem class="sliderItem">
+            <img src="{{product.pictureUrl}}" alt="" class="sliderImage">
             <div class="sliderBg"></div>
-            <h1 class="sliderTitle">AIR FORCE <br> NEW <br> SEASON</h1>
-            <h2 class="sliderPrice">$199</h2>
-            <a href="#product">
-                <button class="buyButton">BUY NOW</button>
-            </a>
-        </div>
-    </slide>
-    <slide>
-        <div class="sliderItem">
-            <img src="assets/images/sneakers/crater.png" alt="" class="sliderImage">
-            <div class="sliderBg"></div>
-            <h1 class="sliderTitle">AIR JORDAN <br> NEW <br> SEASON</h1>
-            <h2 class="sliderPrice">$199</h2>
-            <a href="#product">
-                <button class="buyButton">BUY NOW</button>
-            </a>
-        </div>
-    </slide>
-    <slide>
-        <div class="sliderItem">
-            <img src="assets/images/sneakers/blazer.png" alt="" class="sliderImage">
-            <div class="sliderBg"></div>
-            <h1 class="sliderTitle">BLAZER <br> NEW <br> SEASON</h1>
-            <h2 class="sliderPrice">$199</h2>
+            <h3 class="sliderTitle">{{product.name}} <br> NEW <br> SEASON</h3>
+            <h2 class="sliderPrice">${{product.price}}</h2>
             <a href="#product">
                 <button class="buyButton">BUY NOW</button>
             </a>
@@ -72,6 +50,7 @@
                 <div class="color"></div>
                 <div class="color"></div>
             </div>
+            
             <div class="sizes">
                 <div class="size">38</div>
                 <div class="size">40</div>
@@ -81,6 +60,47 @@
             <button class="productBtn">
                 BUY NOW!
             </button>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="galleryItem">
+            <h1 class="galleryTitle">Be yourself</h1>
+            <img class="galleryImg"
+                src="https://images.pexels.com/photos/2827400/pexels-photo-2827400.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt="">
+        </div>
+        <div class="galleryItem">
+            <img class="galleryImg"
+                src="https://images.pexels.com/photos/2803158/pexels-photo-2803158.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt="">
+            <h2 class="galleryTitle">Your New Life</h2>
+        </div>
+        <div class="galleryItem">
+            <h1 class="galleryTitle">Just Do it! </h1>
+            <img class="galleryImg"
+                src="https://images.pexels.com/photos/1886487/pexels-photo-1886487.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt="">
+        </div>
+    </div>
+
+    <div class="newSeason">
+        <div class="newSeasonItem">
+            <img class="nsImg"
+                src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="">
+        </div>
+        <div class="newSeasonItem">
+            <h3 class="nsTitleSm">WINTER NEW ARRIVALS</h3>
+            <h1 class="nsTitle">New Season</h1>
+            <h1 class="nsTitle">New Collection</h1>
+            <a routerLink="/shop">
+                <button routerLink="/shop" class="nsBtn">CHOOSE YOUR STYLE</button>
+            </a>
+        </div>
+        <div class="newSeasonItem">
+            <img class="nsImg"
+                src="https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt="">
         </div>
     </div>
 </section>
