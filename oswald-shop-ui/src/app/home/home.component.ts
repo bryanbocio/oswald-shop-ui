@@ -21,11 +21,9 @@ export class HomeComponent implements OnInit {
 
   getProductsForSlider(){
     if(this.productList.length===0){
-      console.log(this.productList)
       this.shopService.getProducts(new ShopParams()).subscribe({
         next: response=>{
           this.productList=response.data;
-          console.log(response.data)
         }
       })
     }
