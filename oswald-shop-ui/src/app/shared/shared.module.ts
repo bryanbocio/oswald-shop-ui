@@ -8,7 +8,8 @@ import { OrderTotalsComponent } from './order-totals/order-totals.component'
 import { ReactiveFormsModule } from '@angular/forms';
 import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
 import { StepperComponent } from './components/stepper/stepper.component';
-import {CdkStepperModule } from '@angular/cdk/stepper'
+import {CdkStepperModule } from '@angular/cdk/stepper';
+import { TextInputComponent } from './components/text-input/text-input.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {CdkStepperModule } from '@angular/cdk/stepper'
     PagerComponent,
     OrderTotalsComponent,
     StepperComponent,
+    TextInputComponent,
   ],
   imports: [
     CommonModule,
@@ -33,7 +35,8 @@ import {CdkStepperModule } from '@angular/cdk/stepper'
     BsDropdownModule,
     ReactiveFormsModule,
     StepperComponent,
-    CdkStepperModule
+    CdkStepperModule,
+    TextInputComponent
   ]
 })
 export class SharedModule { }
