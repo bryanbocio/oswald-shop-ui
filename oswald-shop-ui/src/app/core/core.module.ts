@@ -10,7 +10,6 @@ import { SectionHeaderComponent } from './section-header/section-header.componen
 import { BreadcrumbModule } from 'xng-breadcrumb';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { SharedModule } from '../shared/shared.module';
-import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     NavBarComponent,
@@ -18,7 +17,6 @@ import { FooterComponent } from './footer/footer.component';
     NotFoundComponent,
     ServerErrorComponent,
     SectionHeaderComponent,
-    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -35,7 +33,6 @@ import { FooterComponent } from './footer/footer.component';
     NavBarComponent,
     SectionHeaderComponent,
     NgxSpinnerModule,
-    FooterComponent
   ]
 })
 export class CoreModule { }
