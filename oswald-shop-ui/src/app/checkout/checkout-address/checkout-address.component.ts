@@ -8,7 +8,7 @@ import { FormGroup } from '@angular/forms';
 })
 export class CheckoutAddressComponent implements OnInit {
 
-  @Input() checkoutForm: FormGroup;
+  @Input() checkoutForm?: FormGroup;
 
   
   ngOnInit(): void {

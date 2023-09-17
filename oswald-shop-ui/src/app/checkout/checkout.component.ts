@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-checkout',
@@ -7,13 +7,16 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./checkout.component.scss']
 })
 export class CheckoutComponent implements OnInit {
-
+  checkoutForm: FormGroup;
   constructor(private formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
+    this.createCheckoutForm();
   }
 
-  checkoutForm=this.formBuilder.group({
+
+  createCheckoutForm() {
+  this.checkoutForm=this.formBuilder.group({
       addressForm: this.formBuilder.group({
           firstName:['',Validators.required],
           lastName: ['',Validators.required],
@@ -22,7 +25,6 @@ export class CheckoutComponent implements OnInit {
           state:    ['',Validators.required],
           zipcode:  ['',Validators.required]
       }),
-
       deliveryForm:this.formBuilder.group({
         deliveryMethod:['',Validators.required]
       }),
@@ -30,5 +32,7 @@ export class CheckoutComponent implements OnInit {
         nameOnCard:['', Validators.required]
       })
   });
-
 }
+}
+
+

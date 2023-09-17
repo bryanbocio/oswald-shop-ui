@@ -1,4 +1,4 @@
-export interface DeliveryMethods{
+export interface DeliveryMethod{
     shortName:String;
     deliveryTime:String;
     description:String;
