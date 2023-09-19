@@ -20,7 +20,6 @@ export class CheckoutDeliveryComponent implements OnInit {
     this.checkoutService.getDeliveryMethods().subscribe({
       next: dm=> {
         this.deliveryMethods=dm
-        console.log(this.deliveryMethods)
       }
     }
     );

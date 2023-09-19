@@ -22,6 +22,7 @@ export class AccountService {
       this.currentUserSource.next(null);
       return of(null);
     }
+    
     let headers= new HttpHeaders();
     headers= headers.set('Authorization', `Bearer ${token}`)
 
