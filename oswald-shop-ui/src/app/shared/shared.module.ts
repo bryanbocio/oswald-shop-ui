@@ -11,6 +11,8 @@ import { StepperComponent } from './components/stepper/stepper.component';
 import {CdkStepperModule } from '@angular/cdk/stepper';
 import { TextInputComponent } from './components/text-input/text-input.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { BasketSummaryComponent } from './basket-summary/basket-summary.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { FooterComponent } from './components/footer/footer.component';
     OrderTotalsComponent,
     StepperComponent,
     TextInputComponent,
-    FooterComponent
+    FooterComponent,
+    BasketSummaryComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +30,8 @@ import { FooterComponent } from './components/footer/footer.component';
     CarouselModule.forRoot(),
     BsDropdownModule.forRoot(),
     ReactiveFormsModule,
-    CdkStepperModule
+    CdkStepperModule,
+    RouterModule
   ],exports:[
     PaginationModule,
     PaginationHeaderComponent,
@@ -39,7 +43,8 @@ import { FooterComponent } from './components/footer/footer.component';
     StepperComponent,
     CdkStepperModule,
     TextInputComponent,
-    FooterComponent
+    FooterComponent,
+    BasketSummaryComponent
   ]
 })
 export class SharedModule { }
